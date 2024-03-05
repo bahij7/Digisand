@@ -12,5 +12,11 @@ Route::get('/products', function () {
     return view('products');
 });
 
+Route::get('/delete', function () {
+    return view('delete');
+});
+
+
 Route::post('/submit-form', [FormController::class, 'submitForm'])->name('submit.form');
 Route::get('/products', [FormController::class, 'index']);
+Route::post('/delete-product', [FormController::class, 'delete'])->name('delete-product');

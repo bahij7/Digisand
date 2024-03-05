@@ -26,4 +26,18 @@ class FormController extends Controller
 
         return view('products', compact('products'));
     }
+
+    public function delete(Request $request)
+    {
+        $product = Product::find($request->input('id-deleted'));
+        
+        if ($product) {
+            $product->delete();
+            return redirect('/products')->with('success', 'Product deleted successfully');
+        } else {
+            return redirect('/delete')->with('error', 'Product not found');
+        }
+        
+
+    }
 }
