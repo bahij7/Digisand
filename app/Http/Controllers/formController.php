@@ -17,5 +17,13 @@ class FormController extends Controller
         $product->save();
 
         return redirect('/')->with('success', 'Product added successfully');
+        
+    }
+
+    public function index()
+    {
+        $products = Product::all();
+
+        return view('products', compact('products'));
     }
 }

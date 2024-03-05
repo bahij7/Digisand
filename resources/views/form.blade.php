@@ -12,7 +12,11 @@
     </style>
 </head>
 <body>
-    
+    <h1>Navbar</h1>
+    <a href="/">Add a Product</a>
+    <a href="/products">See products</a>
+<hr/>
+    <h1>Adding a Product</h1>
     <form action="{{ route('submit.form') }}" method="post">
         @csrf
         <input type="text" name="name" placeholder="Product's Name"/><br/>

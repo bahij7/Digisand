@@ -9,4 +9,9 @@ class Product extends Model
     protected $table = 'produits';
 
     protected $fillable = ['name', 'description', 'price'];
+
+    public static function getAllProducts()
+    {
+        return self::all();
+    }
 }
