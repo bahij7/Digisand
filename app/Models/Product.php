@@ -14,4 +14,9 @@ class Product extends Model
     {
         return self::all();
     }
+
+    public function comments()
+    {
+        return $this->hasMany(Comments::class, 'produit_id');
+    }
 }

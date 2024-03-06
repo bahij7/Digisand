@@ -16,8 +16,7 @@ class FormController extends Controller
 
         $product->save();
 
-        return redirect('/')->with('success', 'Product added successfully');
-        
+        return redirect('products')->with('success', 'Product added successfully');  
     }
 
     public function index()

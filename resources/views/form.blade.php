@@ -9,9 +9,16 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
+        .alert{
+            background: lightcoral;
+            color: red;
+            width: fit-content;
+            padding: 4px 10px;
+        }
     </style>
 </head>
 <body>
+    <p class="alert">Language: {{ $languageMessage }}</p>
     <h1>Navbar</h1>
     <a href="/">Add a Product</a>
     <a href="/delete">Delete a Product</a>

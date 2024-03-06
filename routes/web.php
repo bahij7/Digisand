@@ -18,5 +18,5 @@ Route::get('/delete', function () {
 
 
 Route::post('/submit-form', [FormController::class, 'submitForm'])->name('submit.form');
-Route::get('/products', [FormController::class, 'index']);
+Route::get('/products', [FormController::class, 'index'])->name('products');
 Route::post('/delete-product', [FormController::class, 'delete'])->name('delete-product');
